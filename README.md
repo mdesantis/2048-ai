@@ -32,16 +32,23 @@ Run `bin/2048` if you want to see the AI by itself in action.
 
 ## Running the browser-control version
 
+The browser-control version requires Python. First, install Python dependencies using `pipenv`:
+
+```sh
+pip install --upgrade pipenv
+pipenv install
+```
+
 ### Firefox
 
 Enable Firefox remote debugging by setting the about:config options "devtools.debugger.remote-enabled" and "devtools.chrome.enabled" to true, then start Firefox with the `--start-debugger-server 32000` command-line option.
 
 Open up the [2048 game](http://gabrielecirulli.github.io/2048/) or any compatible clone and start remote control.
 
-Run `2048.py -b firefox` and watch the game! The `-p` option can be used to set the port to connect to.
+Run `pipenv run python 2048.py -b firefox` and watch the game! The `-p` option can be used to set the port to connect to.
 
 ### Chrome
 
 Enable Chrome remote debugging by starting it with the `remote-debugging-port` command-line switch (e.g. `google-chrome --remote-debugging-port=9222`).
 
-Open up the [2048 game](http://gabrielecirulli.github.io/2048/), then run `2048.py -b chrome` and watch the game! The `-p` option can be used to set the port to connect to.
+Open up the [2048 game](http://gabrielecirulli.github.io/2048/), then run `pipenv run python 2048.py -b chrome` and watch the game! The `-p` option can be used to set the port to connect to.
