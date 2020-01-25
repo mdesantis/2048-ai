@@ -11,3 +11,11 @@ config.h
 config.log
 config.status
 Makefile
+
+
+#Added by cargo
+#
+#already existing elements are commented out
+
+/target
+**/*.rs.bk
